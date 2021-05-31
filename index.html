@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script>
+			function check()
+            {
+             var a =  document.getElementById("text").value;
+          
+              var b = a.replace(/[^a-zA-Z0-9]/g, '');
+              var c = b.toLowerCase();
+             var d = c.split('').reverse().join('');
+             if(c==d)
+             
+             {
+                
+                document.getElementById("result").innerHTML = a+" is a palindrome";
+            }
+            else
+            {
+              document.getElementById("result").innerHTML = a+" is not a palindrome";  
+            }
+            }
+            
+		</script>
+	</head>
+	<body>
+	
+        <center>
+        <h1>Palindrome</h1>
+        Enter your text to check palindrome<br>
+        
+        <textarea id = "text"> </textarea><br>
+        <button id = "check" onclick = "check()">Check</button><br>
+        <div id = "result">
+            
+        </div>
+        </center>
+	</body>
+</html>
